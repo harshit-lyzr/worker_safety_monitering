@@ -49,9 +49,17 @@ def encode_image(image_path):
 
 uploaded_files = st.file_uploader("Upload Your Construction Map", type=['png', 'jpg'])
 prompt = f"""
-Please analyze the uploaded image of our factory site. Identify and highlight potential safety hazards such as unguarded machinery, tripping hazards, missing safety signs, and workers not using PPE. 
+Please analyze the uploaded image of our factory site. Identify and highlight potential safety hazards based on Industrial Safety Regulations(Occupational Safety and Health Administration (OSHA) standards) such as unguarded machinery, tripping hazards, missing safety signs, and workers not using PPE. 
 Provide a detailed report suggesting specific safety measures to mitigate each identified risk. 
 Ensure the suggestions comply with current industrial safety regulations and prioritize actions based on the severity of the hazards.
+
+Output Requirements:
+1/ Potential Safety Hazards
+2/ Detailed Safety Measures
+3/ Prioritization of Actions
+       1/ Immediate
+       2/ short-term
+       3/ long-term
 
 IF IMAGE IS NOT RELATED TO WORKERS SAFETY OR FACTORY SITE THEN REPLY "Please upload Image related to factory site.This image does not belong to Factory site."""
 if uploaded_files is not None:
