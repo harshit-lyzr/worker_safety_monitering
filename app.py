@@ -28,8 +28,8 @@ st.image(image, width=150)
 
 # App title and introduction
 st.title("Worker Safety Monitering👷‍")
-st.sidebar.markdown("## Welcome to the Worker Safety Monitering!")
-st.sidebar.markdown("In this App you need to Upload Your Factory Site image and It can Analyze Your Image and Generate Safety Measures for Your Workers.")
+st.markdown("## Welcome to the Worker Safety Monitering!")
+st.markdown("In this app, upload an image of your factory site, and it will analyze the image to generate customized safety measures for your workers. This advanced image analysis technology helps enhance workplace safety by identifying potential hazards and providing tailored recommendations to ensure a secure working environment.")
 
 api = st.sidebar.text_input("Enter Your OPENAI API KEY HERE",type="password")
 
@@ -47,7 +47,7 @@ def encode_image(image_path):
                 return base64.b64encode(image_file.read()).decode('utf-8')
 
 
-uploaded_files = st.file_uploader("Upload Your Construction Map", type=['png', 'jpg'])
+uploaded_files = st.file_uploader("Upload Factory Site Image", type=['png', 'jpg'])
 prompt = f"""
 Please analyze the uploaded image of our factory site. Identify and highlight potential safety hazards based on Industrial Safety Regulations(Occupational Safety and Health Administration (OSHA) standards) such as unguarded machinery, tripping hazards, missing safety signs, and workers not using PPE. 
 Provide a detailed report suggesting specific safety measures to mitigate each identified risk. 
