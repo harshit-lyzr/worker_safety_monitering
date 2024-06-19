@@ -65,9 +65,9 @@ def generate_response(image_url):
         **Recommended Safety Equipments:**
             equipment1: SAFETY measure for equipment1
         **Prioritization of Actions:**
-              **\n1 Immediate**
-           **\n2 short-term**
-           **\n3 long-term**
+              **\n1) Immediate**
+           **\n2) short-term**
+           **\n3) long-term**
      """
 
     safety_measures = openai_4o_model.generate_text(prompt=prompt1, image_url=encoded_image)
