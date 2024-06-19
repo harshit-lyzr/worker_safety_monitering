@@ -35,14 +35,13 @@ st.title("Worker Safety Recommendation Agent👷‍")
 st.sidebar.markdown("## Welcome to the Worker Safety Recommendation Agent!")
 st.sidebar.markdown("This advanced image analysis technology helps enhance workplace safety by identifying potential hazards and providing tailored recommendations to ensure a secure working environment.")
 st.sidebar.markdown(f"""
-How to get started
-
-    -Upload an image
-    -Generate customized safety measures for your workplace
-    its that easy!
+**How to get started**
+  \n-Upload an image
+  \n-Generate customized safety measures for your workplace
+its that easy!
 """)
 
-openai_4o_model = GPTVISION(api_key=api,parameters={})
+openai_4o_model = GPTVISION(api_key=api, parameters={})
 
 data_directory = "data"
 os.makedirs(data_directory, exist_ok=True)
